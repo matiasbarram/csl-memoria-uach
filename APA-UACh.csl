@@ -108,7 +108,7 @@
   </locale>
   <locale xml:lang="es">
     <terms>
-      <term name="from">de</term>
+      <term name="from">desde</term>
       <term name="letter">comunicación personal</term>
       <term name="letter" form="short">carta</term>
     </terms>
