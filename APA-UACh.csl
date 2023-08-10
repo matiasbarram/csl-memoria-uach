@@ -1454,30 +1454,26 @@
     </group>
   </macro>
   <macro name="access">
-    <choose>
-      <if variable="DOI" match="any">
-          <group delimiter=" ">
-              <text value="Accedido el" text-case="capitalize-first" />
-              <date variable="accessed" form="text" suffix="," />
-              <text term="from" />
-              <text variable="DOI" prefix="https://doi.org/" />
-          </group>
-      </if>
-      <else-if variable="URL">
-        <group delimiter=" ">
-          <choose>
-            <if variable="issued status" match="none">
+      <choose>
+          <!-- Caso para DOI -->
+          <if variable="DOI" match="any">
               <group delimiter=" ">
-                <text value="Accedido el" text-case="capitalize-first" />
-                <date variable="accessed" form="text" suffix="," />
-                <text term="from" />
+                  <text value="Accedido el" text-case="capitalize-first" />
+                  <date variable="accessed" form="text" suffix="," />
+                  <text term="from" />
+                  <text variable="DOI" prefix="https://doi.org/" />
               </group>
-            </if>
-          </choose>
-          <text variable="URL" />
-        </group>
-      </else-if>
-    </choose>
+          </if>
+          <!-- Caso para URL cuando no hay DOI -->
+          <else-if variable="URL">
+              <group delimiter=" ">
+                  <text value="Accedido el" text-case="capitalize-first" />
+                  <date variable="accessed" form="text" suffix="," />
+                  <text term="from" />
+                  <text variable="URL" />
+              </group>
+          </else-if>
+      </choose>
   </macro>
   <macro name="event">
     <choose>
