@@ -2,7 +2,7 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0"
   page-range-format="expanded" demote-non-dropping-particle="never" default-locale="es-ES">
   <info>
-    <title>American Psychological Association 7th edition - Matias Barra - test</title>
+    <title>American Psychological Association 7th edition - Matias Barra</title>
     <title-short>APA</title-short>
     <id>http://zotero.org/styles/535553551</id>
     <link href="http://www.zotero.org/styles/apa" rel="self" />
@@ -479,8 +479,12 @@
             </group>
           </else-if>
           <else>
-            <text term="no date" form="short" />
-            <text variable="year-suffix" prefix="-" />
+              <choose>
+                  <if type="webpage" match="none">
+                      <text term="no date" form="short" />
+                      <text variable="year-suffix" prefix="-" />
+                  </if>
+              </choose>
           </else>
         </choose>
       </group>
