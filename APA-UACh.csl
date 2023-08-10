@@ -452,7 +452,7 @@
             <text variable="year-suffix" />
             <choose>
               <if
-                type="article-magazine article-newspaper broadcast interview motion_picture pamphlet personal_communication post post-weblog song speech webpage"
+                type="article-magazine article-newspaper broadcast interview motion_picture pamphlet personal_communication post post-weblog song speech"
                 match="any">
                 <date variable="issued">
                   <date-part prefix=", " name="month" />
