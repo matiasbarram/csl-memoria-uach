@@ -481,7 +481,6 @@
           <else>
               <choose>
                   <if type="webpage" match="none">
-                      <text term="no date" form="short" />
                       <text variable="year-suffix" prefix="-" />
                   </if>
               </choose>
