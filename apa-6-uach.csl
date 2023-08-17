@@ -61,7 +61,7 @@
   </locale>
   <locale xml:lang="es">
     <terms>
-      <term name="from">de</term>
+      <term name="from">desde</term>
     </terms>
   </locale>
   <locale xml:lang="de">
@@ -481,7 +481,7 @@
               <date variable="accessed" form="text" suffix="," />
             </if>
           </choose>
-          <text term="desde" />
+          <text term="from" />
           <choose>
             <if type="report">
               <choose>
