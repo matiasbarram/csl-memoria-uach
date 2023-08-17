@@ -475,7 +475,7 @@
       </else-if>
       <else-if variable="URL">
         <group delimiter=" ">
-          <text term="Accedido el" text-case="capitalize-first" />
+          <text value="Accedido el" text-case="capitalize-first" />
           <choose>
             <if type="post post-weblog webpage" match="any">
               <date variable="accessed" form="text" suffix="," />
