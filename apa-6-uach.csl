@@ -470,9 +470,16 @@
   <macro name="access">
     <choose>
       <if type="bill legal_case legislation" match="any" />
+
       <else-if variable="DOI" match="any">
-        <text variable="DOI" prefix="https://doi.org/" />
+        <group delimiter=" ">
+            <text value="Accedido el" text-case="capitalize-first" />
+            <date variable="accessed" form="text" suffix="," />
+            <text term="from" />
+            <text variable="DOI" prefix="https://doi.org/" />
+        </group>
       </else-if>
+
       <else-if variable="URL">
         <group delimiter=" ">
           <text value="Accedido el" text-case="capitalize-first" />
